@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Petrol Calculator</h1>
+<p>Enter Litres: <input id="Litres" type="number" min="0" max="1000000" ></p>
+<p>Cost per Unit of Fuel: $ <input id="costper" type="number" min="1.72" max="1.72" step="0.01" value="1.72" ></p>
+<h2 id="purchased"></h2>
+
+<div class='button'>
+    <button onclick="myCalculate()">Calculate</button>
+</div>
+
+<script>
+function myCalculate(){
+    var Litres = parseFloat(document.getElementById('Litres').value);
+    var costper = parseFloat(document.getElementById('costper').value);
+
+    
+
+    var totalCost = (Litres * costper).toFixed(2);
+
+    document.getElementById('purchased').innerHTML = "Total Fuel Purchased Cost: $ " + totalCost;
+}
+</script>
+</body>
+</html>
